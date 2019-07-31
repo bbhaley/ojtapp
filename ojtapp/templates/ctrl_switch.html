@@ -1,0 +1,185 @@
+{% extends 'dip-sw.html' %}
+{% load static %}
+
+{% block content %}
+<hr width=1500px; noshade>
+<font size="5" style="padding-left: 340px;">スイッチ設定</font>
+<div class="switch_set">
+    <div class="switch_ex">
+        宅内aaaaaaaaa<br />
+    </div>
+    <div class="switch_ex2">
+        RLDN宅内2次側断<br />
+        RECダークファイバー断<br />
+        RINH宅内MC電源断<br />
+        LLDH集合MC~SB設備断<br />
+        <br />
+        ※秋山さん集合メディコン<br />
+        <br />
+        ※渡辺さん客先DIPSW<br />
+        <br /><br /><br />
+        トレーニングでやりたい事<br />
+        どこで断になっているか<br />
+        <br />
+        設定がちゃんとできているか<br />
+        <br />
+        10Mbps半二重<br />
+        色々なパターンを試験したい<br />
+    </div>
+    
+        <table class="TD" width="600" border="1">
+            <tr class="tab_color">
+                <th>設定項目</th>
+                <th colspan="2">自局装置側設定</th>
+                <th>差異</th>
+            </tr>
+            <tr>
+                <th rowspan="6">LAN側コネクションタイプ</th>
+                <td><input type="radio" name="LAN" value="100b_full"></td>
+                <td>100BASE-TX,全二重</td>
+                <td rowspan="6">－</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="LAN" value="100b_half"></td>
+                <td>100BASE-TX,半二重</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="LAN" value="10b_full"></td>
+                <td>10BASE-TX,全二重</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="LAN" value="10b_half"></td>
+                <td>10BASE-TX,半二重</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="LAN" value="100m10m_auto"></td>
+                <td>自動(100Mbps/10Mbps)</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="LAN" value="10m_auto"></td>
+                <td>自動(10Mbps固定)</td>
+            </tr>
+            <tr>
+                <th rowspan="2">ALARM OFF</th>
+                <td><input type="radio" name="ALARM" value="alarm_on"></td>
+                <td>アラーム出力する</td>
+                <td rowspan="2">－</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="ALARM" value="alarm_off"></td>
+                <td>アラーム出力しない</td>
+            </tr>
+            <tr>
+                <th rowspan="2">RECリンクパススルー機能</th>
+                <td><input type="radio" name="REC" value="rec_off"></td>
+                <td>無効</td>
+                <td rowspan="2">－</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="REC" value="rec_on"></td>
+                <td>有効</td>
+            </tr>
+            <tr>
+                <th rowspan="2">SENDリンクパススルー機能</th>
+                <td><input type="radio" name="SEND" value="send_off"></td>
+                <td>無効</td>
+                <td rowspan="2">－</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="SEND" value="rec_on"></td>
+                <td>有効</td>
+            </tr>
+            <tr>
+                <th rowspan="2">RLDNリンクパススルー機能</th>
+                <td><input type="radio" name="RLDN" value="RLDN_off"></td>
+                <td>無効</td>
+                <td rowspan="2">－</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="RLDN" value="RLDN_on"></td>
+                <td>有効</td>
+            </tr>
+            <tr>
+                <th rowspan="2">RINHリンクパススルー機能</th>
+                <td><input type="radio" name="RINH" value="RINH_off"></td>
+                <td>無効</td>
+                <td rowspan="2">－</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="RINH" value="RINH_on"></td>
+                <td>有効</td>
+            </tr>
+            <tr>
+                <th rowspan="2">RINH</th>
+                <td><input type="radio" name="RINH2" value="RINH2_off"></td>
+                <td>無効</td>
+                <td rowspan="2">－</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="RINH2" value="RINH2_on"></td>
+                <td>有効</td>
+            </tr>
+            <tr>
+                <th rowspan="2">FEFI</th>
+                <td><input type="radio" name="FEFI" value="FEFI_off"></td>
+                <td>無効</td>
+                <td rowspan="2">－</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="FEFI" value="rFEFI_on"></td>
+                <td>有効</td>
+            </tr>
+            <tr class="tab_color">
+                <th>設定項目</th>
+                <th colspan="3">対局装置側測定</th>
+            </tr>
+            <tr>
+                <th rowspan="6">LAN側コネクションタイプ</th>
+                <td colspan="3"><b>100BASE-TX,全二重</b></td>
+            </tr>
+            <tr>
+                <td colspan="3">100BASE-TX,半二重</td>
+            </tr>
+            <tr>
+                <td colspan="3">10BASE-TX,全二重</td>
+            </tr>
+            <tr>
+                <td colspan="3">10BASE-TX,半二重</td>
+            </tr>
+            <tr>
+                <td colspan="3">自動(100Mbps/10Mbps)</td>
+            </tr>
+            <tr>
+                <td colspan="3">自動(10Mbps固定)</td>
+            </tr>
+            <tr>
+                <th rowspan="2">RECリンクパススルー機能</th>
+                <td colspan="3">無効</td>
+            </tr>
+            <tr>
+                <td colspan="3"><b>有効</b></td>
+            </tr>
+            <tr>
+                <th rowspan="2">SENDリンクパススルー機能</th>
+                <td colspan="3">無効</td>
+            </tr>
+            <tr>
+                <td colspan="3"><b>有効</b></td>
+            </tr>
+            <tr>
+                <th rowspan="2">RLDNリンクパススルー機能</th>
+                <td colspan="3">無効</td>
+            </tr>
+            <tr>
+                <td colspan="3"><b>有効</b></td>
+            </tr>
+            <tr>
+                <th rowspan="2">FEFI</th>
+                <td colspan="3"><b>無効</b></td>
+            </tr>
+            <tr>
+                <td colspan="3">有効</td>
+            </tr>
+
+    </div>
+{% endblock %}

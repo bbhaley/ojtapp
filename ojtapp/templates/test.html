@@ -1,0 +1,17 @@
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'test2' switch.id %}" method="post">    
+{% csrf_token %}
+<table width="600" border="1">
+    <tr>
+        <th rowspan="6">{{ switch.set_text }}</th>
+        <td>{% for select in switch.select_set.all %}
+        <input type="radio" name="select" id="select{{ forloop.counter }}" value="{{ select.id }}">
+        <label for="select{{ forloop.counter }}">{{ select.status_text }}</label>
+        <br>
+        {% endfor %}</td>
+    </tr>
+        <input type="submit" value="Set">
+</table>
+</form>

@@ -1,0 +1,23 @@
+﻿{% load static %}
+<html lang="ja">
+    <head>
+    	<meta charset="UTF-8">
+        <title>DA集合MCトレーニング用</title>
+        <link rel="stylesheet" href="{% static 'ojtapp.css' %}">
+    </head>
+    <body>
+    	<br /><br />
+    	<table width="600" align="center" border="1" style="text-align:center;">
+		<tr>
+		<td bgcolor="#c9c5c5">集合MCノード名</td>
+		<td>対象集合MC名</td>
+		<td bgcolor="#c9c5c5">集合MCチャンネル</td>
+		<td>CH番号</td>
+		</tr>
+		</table>
+		<br /><br />
+		<button class="button"><a href="{% url 'dipsw' %}"style="text-decoration:none;">DIP-SW画面</button></a>
+		<div align="left" padding-left="50px"><button class="button" ><a href="{% url 'alm' %}"style="text-decoration:none;">ALM画面</button></a></div>
+		<div align="left"><button class="button">LOOP画面</button></div>
+	</body>
+</html>
