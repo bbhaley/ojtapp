@@ -1,9 +1,0 @@
-<h1>{{ switch.set_text }}</h1>
-
-<ul>
-    {% for select in switch.select_set.all %}
-    <li>{{ select.status_text }} -- {{ select.set }} vote{{ select.set|pluralize }}</li>
-    {% endfor %}
-</ul>
-
-<a href="{% url 'test' switch.id %}">Set again?</a>
